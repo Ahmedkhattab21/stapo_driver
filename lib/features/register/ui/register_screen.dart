@@ -28,7 +28,7 @@ class RegisterScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 verticalSpace(20),
-                Center(child: Image.asset(ImageAsset.logoImage)),
+                // Center(child: Image.asset(ImageAsset.logoImage)),
                 verticalSpace(60),
                 Center(
                   child:

@@ -8,6 +8,7 @@ class ButtonWidget extends StatelessWidget {
   final double? horizontalPadding;
   final double? verticalPadding;
   final Color? backGroundColor;
+  final BoxShadow? boxShadow;
   final double? buttonWidth;
   final double? buttonHeight;
   final String buttonText;
@@ -21,6 +22,7 @@ class ButtonWidget extends StatelessWidget {
     this.horizontalPadding,
     this.verticalPadding,
     this.backGroundColor,
+    this.boxShadow,
     this.buttonHeight,
     this.buttonWidth,
     required this.buttonText,
@@ -34,7 +36,7 @@ class ButtonWidget extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         height: buttonHeight ?? 50.h,
-        width: buttonWidth?.w ?? double.maxFinite,
+        width: buttonWidth?.w,
         alignment: Alignment.center,
         padding: EdgeInsets.symmetric(
           horizontal: horizontalPadding?.w ?? 12.w,
@@ -43,7 +45,12 @@ class ButtonWidget extends StatelessWidget {
         decoration: BoxDecoration(
             color: backGroundColor,
             borderRadius: BorderRadius.circular(borderRadius ?? 20.0),
-            border: Border.all(color: borderColor ?? AppColors.whiteColor)),
+            border: Border.all(color: borderColor ?? AppColors.whiteColor),
+            boxShadow: boxShadow == null
+                ? null
+                : [
+                    boxShadow!,
+                  ]),
         child: Text(
           buttonText,
           style: textStyle,

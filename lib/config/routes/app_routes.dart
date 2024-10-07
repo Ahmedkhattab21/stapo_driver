@@ -4,10 +4,8 @@ import 'package:stapo_driver/features/forget_password/logic/forget_password_cubi
 import 'package:stapo_driver/features/forget_password/ui/forget_password_screen.dart';
 import 'package:stapo_driver/features/login/logic/login_cubit.dart';
 import 'package:stapo_driver/features/login/ui/login_screen.dart';
-import 'package:stapo_driver/features/on_boarding/ui/boarding_screen.dart';
-import 'package:stapo_driver/features/on_boarding/ui/on_boarding_screen_1.dart';
-import 'package:stapo_driver/features/on_boarding/ui/on_boarding_screen_2.dart';
-import 'package:stapo_driver/features/on_boarding/ui/on_boarding_screen_3.dart';
+import 'package:stapo_driver/features/on_boarding/logic/on_boarding_cubit.dart';
+import 'package:stapo_driver/features/on_boarding/ui/on_boarding_screen.dart';
 import 'package:stapo_driver/features/register/logic/register_cubit.dart';
 import 'package:stapo_driver/features/register/ui/register_screen.dart';
 import 'package:stapo_driver/features/reset_password/logic/reset_password_cubit.dart';
@@ -21,22 +19,12 @@ class RouteGenerator {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
     final dynamic args = settings.arguments;
     switch (settings.name) {
-      case Routes.onBoardingScreen1:
+      case Routes.onBoardingScreen:
         return MaterialPageRoute(
-          builder: (_) => const OnBoardingScreen1(),
-        );
-      case Routes.onBoardingScreen2:
-        return MaterialPageRoute(
-          builder: (_) => const OnBoardingScreen2(),
-        );
-      case Routes.onBoardingScreen3:
-        return MaterialPageRoute(
-          builder: (_) => const OnBoardingScreen3(),
-        );
-      case Routes.boardingScreen:
-        return MaterialPageRoute(
-          builder: (_) => const BoardingScreen(),
-        );
+            builder: (_) => BlocProvider(
+                  create: (context) => OnBoardingCubit(),
+                  child: const OnBoardingScreen(),
+                ));
 
       case Routes.loginScreen:
         return MaterialPageRoute(

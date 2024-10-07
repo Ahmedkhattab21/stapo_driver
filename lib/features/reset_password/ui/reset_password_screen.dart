@@ -26,7 +26,7 @@ class ResetPasswordScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 verticalSpace(20),
-                Center(child: Image.asset(ImageAsset.logoImage)),
+                // Center(child: Image.asset(ImageAsset.logoImage)),
                 verticalSpace(80),
                 Text("كلمة المرور*",
                     style: TextStyles.font15DarkBlueColor33Weight400),

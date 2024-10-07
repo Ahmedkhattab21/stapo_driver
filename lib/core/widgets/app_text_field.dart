@@ -10,9 +10,11 @@ class AppTextFormField extends StatelessWidget {
   final InputBorder? enabledBorder;
   final TextStyle? inputTextStyle;
   final TextStyle? hintStyle;
+  final TextStyle? style;
   final String hintText;
   final bool? isObscureText;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   final Color? backgroundColor;
   final bool isPhoneNumber;
   final bool? isRegister;
@@ -31,9 +33,11 @@ class AppTextFormField extends StatelessWidget {
     this.enabledBorder,
     this.inputTextStyle,
     this.hintStyle,
+    this.style,
     required this.hintText,
     this.isObscureText,
     this.suffixIcon,
+    this.prefixIcon,
     this.backgroundColor,
     this.controller,
     required this.validator,
@@ -78,29 +82,19 @@ class AppTextFormField extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(20.r),
             ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: AppColors.greyColor,
-            width: 1.3,
-          ),
-          borderRadius: BorderRadius.circular(20.r),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: AppColors.greyColor,
-            width: 1.3,
-          ),
-          borderRadius: BorderRadius.circular(20.r),
-        ),
-        hintStyle: hintStyle ?? TextStyles.font16GreyColorWeight400,
+        errorBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: AppColors.whiteColorE5)),
+        focusedErrorBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: AppColors.whiteColorE5)),
+        hintStyle: hintStyle ?? TextStyles.font15BlackColorFWeight400,
         hintText: hintText,
-
+        prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         fillColor: backgroundColor ?? AppColors.whiteColor,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: TextStyles.font15DarkBlueColor33Weight400,
+      style: style ?? TextStyles.font15BlackColorWeight400,
       validator: (value) {
         return validator(value);
       },

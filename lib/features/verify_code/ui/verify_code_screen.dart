@@ -13,6 +13,7 @@ import 'package:stapo_driver/features/verify_code/ui/widgets/verify_button.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:country_flags/country_flags.dart';
 
 class VerifyCodeScreen extends StatelessWidget {
   final bool isRegister;
@@ -33,25 +34,57 @@ class VerifyCodeScreen extends StatelessWidget {
           backgroundColor: AppColors.whiteColor,
           appBar: AppBar(
             backgroundColor: AppColors.whiteColor,
+            title:
+                Text("Verify OTP", style: TextStyles.font14BlackColorWeight400),
             elevation: 0,
           ),
           body: SafeArea(
             child: SingleChildScrollView(
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  verticalSpace(20),
-                  Center(
-                    child: Text("التحقق من OTP",
-                        style: TextStyles.font25RedColorWeight700),
-                  ),
-                  verticalSpace(20),
-                  Center(
-                    child: Text("رجاء ادخل رمز التحقق ",
-                        style: TextStyles.font17DarkBlueColor33Weight400),
-                  ),
                   verticalSpace(70),
+                  Text(
+                    "Enter the \n code received on \n your mobile no.",
+                    textAlign: TextAlign.center,
+                    style: TextStyles.font25BlackColorEWeight600,
+                  ),
+                  verticalSpace(20),
+
+                  Container(
+                    width: 200.w,
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: AppColors.whiteColorF5,
+                      borderRadius: BorderRadius.circular(13.r),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "+971 52 812 1947",
+                          textAlign: TextAlign.center,
+                          style: TextStyles.font15WhiteColorFWeight400,
+                        ),
+                        horizontalSpace(10),
+                        CountryFlag.fromCountryCode(
+                          'ES',
+                          shape: const Circle(),
+                          height: 20.r,
+                          width: 20.r,
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  verticalSpace(50),
+
+
+                  ///
+                  ///
                   Center(
                       child: CodesTextFields(
                     codeController: codeController,
@@ -70,7 +103,7 @@ class VerifyCodeScreen extends StatelessWidget {
                     resendCode: () {
                       if (isRegister) {
                       } else {
-                        ForgetPasswordCubit.get(context).sendCode(userId);
+                        // ForgetPasswordCubit.get(context).sendCode(userId);
                       }
                     },
                   ),

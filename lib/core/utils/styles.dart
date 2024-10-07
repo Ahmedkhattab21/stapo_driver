@@ -3,12 +3,147 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextStyles {
+  static TextStyle font14WhiteColorWeight300 = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.whiteColor,
+    fontWeight: FontWeight.w300,
+  );
+  static TextStyle font16WhiteColorEWeight400 = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.whiteColorE,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle font18BlackColorEWeight600 = TextStyle(
+    fontSize: 18.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w600,
+  );
+
+
+  static TextStyle font40WhiteColorEWeight700 = TextStyle(
+      fontSize: 40.sp,
+      color: AppColors.whiteColorE,
+      fontWeight: FontWeight.w700,
+      height: 1.3);
+  static TextStyle font14BlackColorEWeight700 = TextStyle(
+      fontSize: 14.sp,
+      color: AppColors.blackColor,
+      fontWeight: FontWeight.w700,
+      height: 1.3);
+  static TextStyle font14BlackColor2EWeight700 = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle font14WhiteColorEWeight700 = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.whiteColor,
+    fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle font25BlackColorEWeight600 = TextStyle(
+      fontSize: 25.sp,
+      color: AppColors.blackColor,
+      fontWeight: FontWeight.w600,
+      height: 1.4,
+      fontFamily: "Poppins",
+  );
+
+
+  static TextStyle font15BlackColorFWeight400 = TextStyle(
+    fontSize: 15.sp,
+    color: AppColors.whiteColorF,
+    fontWeight: FontWeight.w400,
+    fontFamily: "Poppins",
+  );
+
+  static TextStyle font15BlackColorWeight400 = TextStyle(
+    fontSize: 15.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w400,
+    fontFamily: "Poppins",
+  );
+
+  static TextStyle font15BlackColorWeight500 = TextStyle(
+    fontSize: 15.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w500,
+    fontFamily: "Poppins",
+  );
+
+
+  static TextStyle font14BlackColorWeight400 = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w400,
+    fontFamily: "Poppins",
+  );
+
+
+  static TextStyle font14BlackColorWeight500 = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w500,
+    fontFamily: "Poppins",
+  );
+
+
+  static TextStyle font14BlackColorWeight300 = TextStyle(
+    fontSize: 15.sp,
+    color: AppColors.blackColor.withOpacity(.9),
+    fontWeight: FontWeight.w300,
+    fontFamily: "Poppins",
+  );
+
+  static TextStyle font15BlackColorWeight600 = TextStyle(
+    fontSize: 15.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w600,
+    fontFamily: "Poppins",
+  );
+
+  static TextStyle font15WhiteColorFWeight400 = TextStyle(
+    fontSize: 15.sp,
+    color: AppColors.whiteColorF,
+    fontWeight: FontWeight.w400,
+    fontFamily: "Poppins",
+  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
   static TextStyle font26DarkBlueColor4BWeight400 = TextStyle(
     fontSize: 26.sp,
     color: AppColors.darkBlueColor4B,
     fontWeight: FontWeight.w400,
   );
-
   static TextStyle font26RedColorWeight700 = TextStyle(
     fontSize: 26.sp,
     color: AppColors.redColor,

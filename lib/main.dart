@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stapo_driver/features/on_boarding/logic/on_boarding_observer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,18 +26,19 @@ void main() async {
   await checkIfLoggedInUser();
 
   // String? token = await CacheHelper.getSecuredString(AppStrings.saveTokenToShared);
-  bool onBoardingWatch =
-      await CacheHelper.getBool(AppStrings.saveIsOnBoardingToShared);
-  if (onBoardingWatch == true) {
-    navigationScreenRoute = Routes.boardingScreen;
-  } else {
-    // if (isLoggedInUser == true) {
-    //   navigationScreenRoute = Routes.boardingScreen;
-    // } else {
-    navigationScreenRoute = Routes.onBoardingScreen1;
-    // }
-  }
+  // bool onBoardingWatch =
+  //     await CacheHelper.getBool(AppStrings.saveIsOnBoardingToShared);
+  // if (onBoardingWatch == true) {
+  //   navigationScreenRoute = Routes.boardingScreen;
+  // } else {
+  // if (isLoggedInUser == true) {
+  //   navigationScreenRoute = Routes.boardingScreen;
+  // } else {
+  navigationScreenRoute = Routes.onBoardingScreen;
+  // }
+  // }
 
+  Bloc.observer = OnBoardingObserver();
   Bloc.observer = LoginObserver();
 
   runApp(EasyLocalization(
