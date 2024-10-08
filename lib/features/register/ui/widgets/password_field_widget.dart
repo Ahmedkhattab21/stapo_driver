@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:stapo_driver/config/routes/routes.dart';
 import 'package:stapo_driver/core/utils/app_colors_white_theme.dart';
 import 'package:stapo_driver/core/utils/assets_manager.dart';
-import 'package:stapo_driver/core/utils/extentions.dart';
 import 'package:stapo_driver/core/utils/styles.dart';
 import 'package:stapo_driver/core/widgets/app_text_field.dart';
 
@@ -24,11 +22,6 @@ class PasswordFieldWidget extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           child: SvgPicture.asset(ImageAsset.passwordIcon),
         ),
-        suffixIcon: GestureDetector(
-            onTap: () {
-              context.pushNamed(Routes.forgetPasswordScreen);
-            },
-            child: Text("Forgot", style: TextStyles.font15BlackColorWeight500)),
         validator: (String? value) {},
         onchange: (String? value) {},
         focusedBorder: UnderlineInputBorder(

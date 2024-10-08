@@ -6,6 +6,7 @@ class Routes{
   static const forgetPasswordScreen = "/ForgetPasswordScreen";
   static const verifyCodeScreen = "/VerifyCodeScreen";
   static const resetPasswordScreen = "/ResetPasswordScreen";
+  static const signUpSuccessScreen = "/SignUpSuccessScreen";
 
 
 

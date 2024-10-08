@@ -42,6 +42,17 @@ class TextStyles {
     fontWeight: FontWeight.w700,
   );
 
+  static TextStyle font21BlackColorWeight400 = TextStyle(
+    fontSize: 21.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle font16BlackColorWeight400 = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w400,
+  );
+
   static TextStyle font25BlackColorEWeight600 = TextStyle(
       fontSize: 25.sp,
       color: AppColors.blackColor,
@@ -109,6 +120,33 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     fontFamily: "Poppins",
   );
+
+  static TextStyle font18GreyColorA2Weight500 = TextStyle(
+    fontSize: 18.sp,
+    color: AppColors.greyColorA2,
+    fontWeight: FontWeight.w500,
+    fontFamily: "Poppins",
+  );
+
+
+
+  static TextStyle font14GreyColorBCWeight500 = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.greyColorBC,
+    fontWeight: FontWeight.w500,
+    fontFamily: "Poppins",
+  );
+
+
+
+  static TextStyle font15GreyColor82Weight400 = TextStyle(
+    fontSize: 15.sp,
+    color: AppColors.greyColor82,
+    fontWeight: FontWeight.w400,
+    fontFamily: "Poppins",
+  );
+
+
 
 
 

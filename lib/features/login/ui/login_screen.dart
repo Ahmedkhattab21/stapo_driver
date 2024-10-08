@@ -1,5 +1,7 @@
+import 'package:stapo_driver/config/routes/routes.dart';
 import 'package:stapo_driver/core/utils/app_colors_white_theme.dart';
 import 'package:stapo_driver/core/utils/assets_manager.dart';
+import 'package:stapo_driver/core/utils/extentions.dart';
 import 'package:stapo_driver/core/utils/spacing.dart';
 import 'package:stapo_driver/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +53,9 @@ class LoginScreen extends StatelessWidget {
                 Text("New Shopper?",
                     style: TextStyles.font14BlackColorWeight300),
                 GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      context.pushNamed(Routes.registerScreen);
+                    },
                     child: Text("Join Us",
                         style: TextStyles.font15BlackColorWeight600)),
               ],

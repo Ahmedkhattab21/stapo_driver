@@ -19,7 +19,7 @@ class CodesTextFields extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Pinput(
-        length: 4,
+        length: 5,
         keyboardType: TextInputType.number,
         enableSuggestions: true,
         controller: codeController,
@@ -28,35 +28,33 @@ class CodesTextFields extends StatelessWidget {
         ],
         pinputAutovalidateMode: PinputAutovalidateMode.disabled,
         defaultPinTheme: PinTheme(
-          width: 65.r,
-          height: 65.r,
-          textStyle: TextStyles.font26DarkBlueColor4BWeight400,
+          width: 55.r,
+          height: 77.r,
+          textStyle: TextStyles.font18GreyColorA2Weight500,
           decoration: BoxDecoration(
             color: AppColors.whiteColor,
-            border: Border.all(
-                color: AppColors.redColor2.withOpacity(.5), width: 2.5),
-            borderRadius: BorderRadius.circular(20.r),
+            border: Border.all(color: AppColors.greyColorE1, width: 2.5),
+            borderRadius: BorderRadius.circular(12.r),
           ),
         ),
         focusedPinTheme: PinTheme(
-          width: 65.r,
-          height: 65.r,
-          textStyle: TextStyles.font26DarkBlueColor4BWeight400,
+          width: 55.r,
+          height: 77.r,
+          textStyle: TextStyles.font18GreyColorA2Weight500,
           decoration: BoxDecoration(
             color: AppColors.whiteColor,
-            border: Border.all(color: AppColors.redColor, width: 2.5),
-            borderRadius: BorderRadius.circular(20.r),
+            border: Border.all(color: AppColors.greyColorE1, width: 2.5),
+            borderRadius: BorderRadius.circular(12.r),
           ),
         ),
         submittedPinTheme: PinTheme(
-          width: 65.r,
-          height: 65.r,
-          textStyle: TextStyles.font26DarkBlueColor4BWeight400,
+          width: 55.r,
+          height: 77.r,
+          textStyle: TextStyles.font18GreyColorA2Weight500,
           decoration: BoxDecoration(
             color: AppColors.whiteColor,
-            border: Border.all(
-                color: AppColors.redColor2.withOpacity(.5), width: 2.5),
-            borderRadius: BorderRadius.circular(20.r),
+            border: Border.all(color: AppColors.greyColorE1, width: 2.5),
+            borderRadius: BorderRadius.circular(12.r),
           ),
         ),
         showCursor: true,

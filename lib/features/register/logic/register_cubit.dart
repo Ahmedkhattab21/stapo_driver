@@ -1,5 +1,6 @@
 import 'package:stapo_driver/core/services/cache_helper.dart';
 import 'package:stapo_driver/core/utils/constant_keys.dart';
+import 'package:stapo_driver/features/register/data/models/get_country_response.dart';
 import 'package:stapo_driver/features/register/data/repos/register_repo.dart';
 import 'package:stapo_driver/features/register/logic/register_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,21 +11,25 @@ class RegisterCubit extends Cubit<RegisterState> {
   RegisterCubit(this._registerRepo) : super(InitialState());
 
   //
-  // List<GetCountryResponse> countries = [];
-  //
-  // getCounty() {
-  //   emit(OnGetCountryLoadingState());
-  //   _loginRepo.getCountry().then((value) {
-  //     value.fold((l) {
-  //       emit(OnGetCountryErrorState());
-  //     }, (r) {
-  //       countries = r;
-  //       emit(OnGetCountrySuccessState());
-  //     });
-  //   }).catchError((error) {
-  //     emit(OnGetCountryCatchErrorState());
-  //   });
-  // }
+  List<GetCountryResponse> countries = [
+    GetCountryResponse(id: 1, name: "+971"),
+    GetCountryResponse(id: 2, name: "+972"),
+    GetCountryResponse(id: 3, name: "+973"),
+  ];
+
+  getCounty() {
+    // emit(OnGetCountryLoadingState());
+    // _registerRepo.getCountry().then((value) {
+    //   value.fold((l) {
+    //     emit(OnGetCountryErrorState());
+    //   }, (r) {
+    //     countries = r;
+    //     emit(OnGetCountrySuccessState());
+    //   });
+    // }).catchError((error) {
+    //   emit(OnGetCountryCatchErrorState());
+    // });
+  }
 
   // GetCountryResponse? selectedCountry;
   //

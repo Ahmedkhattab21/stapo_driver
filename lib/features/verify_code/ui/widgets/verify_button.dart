@@ -8,14 +8,17 @@ import 'package:stapo_driver/features/verify_code/logic/verify_code_cubit.dart';
 import 'package:stapo_driver/features/verify_code/logic/verify_code_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class VerifyButton extends StatelessWidget {
+  final bool isRegister;
   final int userId;
   final TextEditingController codeController;
 
   const VerifyButton(
-      {required this.userId, required this.codeController, super.key});
+      {required this.isRegister,
+      required this.userId,
+      required this.codeController,
+      super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +45,29 @@ class VerifyButton extends StatelessWidget {
                 ),
               )
             : ButtonWidget(
-                buttonText: "تحقق",
-                borderRadius: 20.r,
-                backGroundColor: AppColors.redColor,
-                textStyle: TextStyles.font20WhiteColorWeight700,
+                buttonText: "Verify OTP",
+                buttonHeight: 50,
+                buttonWidth: 145,
+                borderRadius: 12,
+                backGroundColor: AppColors.yellowColor,
+                borderColor: Colors.transparent,
+                textStyle: TextStyles.font14BlackColorWeight500,
+                boxShadow: BoxShadow(
+                    offset: Offset(15, 15),
+                    spreadRadius: 0,
+                    blurRadius: 25,
+                    color: AppColors.purpleColorDC.withOpacity(.16)),
                 onPressed: () {
-                  VerifyCodeCubit.get(context)
-                      .verifyCode(userId, codeController.text);
+                  print("object");
+                  print(isRegister);
+                  if (isRegister) {
+                    context.pushNamed(Routes.signUpSuccessScreen);
+                  } else {
+                    context.pushNamed(Routes.resetPasswordScreen);
+                  }
+
+                  //    VerifyCodeCubit.get(context)
+                  //                       .verifyCode(userId, codeController.text);
                 });
       },
     );

@@ -54,13 +54,25 @@ class _ResendCodeState extends State<ResendCode> {
         },
         child: Center(
           child: Text("اعادة ارسال الكود",
-              style: TextStyles.font15DarkBlueColor33Weight700),
+              style: TextStyles.font15BlackColorWeight500),
         ),
       );
     } else {
       return Center(
-        child: Text("اعادة الارسال خلال ${_formatTime(_secondsRemaining)}",
-            style: TextStyles.font15DarkBlueColor33Weight700),
+        child: Text.rich(
+          textAlign: TextAlign.center,
+          TextSpan(
+            children: <TextSpan>[
+              TextSpan(
+                  text: 'اعادة الارسال خلال ',
+                  style: TextStyles.font14GreyColorBCWeight500),
+              TextSpan(
+                text: _formatTime(_secondsRemaining),
+                style: TextStyles.font14BlackColorWeight500,
+              ),
+            ],
+          ),
+        ),
       );
     }
   }

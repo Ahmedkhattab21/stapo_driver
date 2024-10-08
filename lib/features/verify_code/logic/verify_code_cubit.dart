@@ -11,20 +11,20 @@ class VerifyCodeCubit extends Cubit<VerifyCodeState> {
   VerifyCodeCubit(this._verifyCodeRepo) : super(InitialState());
 
   verifyCode(int userId, String code) {
-    emit(OnVerifyCodeLoadingState());
-    _verifyCodeRepo
-        .verifyCode(VerifyCodeRequest(userId: userId, code: code))
-        .then((value) {
-      value.fold((l) {
-        emit(OnVerifyCodeErrorState());
-      }, (r) {
-        print("verifyCode");
-        print(r.token);
-        emit(OnVerifyCodeSuccessState());
-      });
-    }).catchError((error) {
-      emit(OnVerifyCodeCatchErrorState());
-    });
+    // emit(OnVerifyCodeLoadingState());
+    // _verifyCodeRepo
+    //     .verifyCode(VerifyCodeRequest(userId: userId, code: code))
+    //     .then((value) {
+    //   value.fold((l) {
+    //     emit(OnVerifyCodeErrorState());
+    //   }, (r) {
+    //     print("verifyCode");
+    //     print(r.token);
+    //     emit(OnVerifyCodeSuccessState());
+    //   });
+    // }).catchError((error) {
+    //   emit(OnVerifyCodeCatchErrorState());
+    // });
   }
 
   // Future<void> saveUserToken(String token) async {

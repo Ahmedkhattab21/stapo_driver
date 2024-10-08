@@ -10,6 +10,7 @@ import 'package:stapo_driver/features/register/logic/register_cubit.dart';
 import 'package:stapo_driver/features/register/ui/register_screen.dart';
 import 'package:stapo_driver/features/reset_password/logic/reset_password_cubit.dart';
 import 'package:stapo_driver/features/reset_password/ui/reset_password_screen.dart';
+import 'package:stapo_driver/features/sign_up_success/ui/sign_up_success_screen.dart';
 import 'package:stapo_driver/features/verify_code/logic/verify_code_cubit.dart';
 import 'package:stapo_driver/features/verify_code/ui/verify_code_screen.dart';
 import 'package:flutter/material.dart';
@@ -75,6 +76,9 @@ class RouteGenerator {
                   create: (context) => ResetPasswordCubit(getIt()),
                   child: const ResetPasswordScreen(),
                 ));
+
+      case Routes.signUpSuccessScreen:
+        return MaterialPageRoute(builder: (_) => const SignUpSuccessScreen());
 
       // case Routes.propertyDetailsScreen:
       //   return MaterialPageRoute(

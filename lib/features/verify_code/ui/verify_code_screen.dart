@@ -51,7 +51,6 @@ class VerifyCodeScreen extends StatelessWidget {
                     style: TextStyles.font25BlackColorEWeight600,
                   ),
                   verticalSpace(20),
-
                   Container(
                     width: 200.w,
                     padding:
@@ -79,26 +78,13 @@ class VerifyCodeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-
                   verticalSpace(50),
-
-
-                  ///
-                  ///
                   Center(
                       child: CodesTextFields(
                     codeController: codeController,
                     userId: userId,
                   )),
                   verticalSpace(50),
-                  VerifyButton(userId: userId, codeController: codeController),
-
-                  verticalSpace(40),
-                  Center(
-                    child: Text("لم يصلك رمز تحقق؟",
-                        style: TextStyles.font15DarkBlueColor33Weight400),
-                  ),
-                  verticalSpace(20),
                   ResendCode(
                     resendCode: () {
                       if (isRegister) {
@@ -106,6 +92,12 @@ class VerifyCodeScreen extends StatelessWidget {
                         // ForgetPasswordCubit.get(context).sendCode(userId);
                       }
                     },
+                  ),
+                  verticalSpace(40),
+                  VerifyButton(
+                    isRegister: isRegister,
+                    userId: userId,
+                    codeController: codeController,
                   ),
                   verticalSpace(10),
                 ],
