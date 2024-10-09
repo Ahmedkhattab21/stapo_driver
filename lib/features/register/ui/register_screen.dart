@@ -3,9 +3,7 @@ import 'package:stapo_driver/core/utils/spacing.dart';
 import 'package:stapo_driver/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:stapo_driver/features/login/ui/widgets/email_field_widget.dart';
 import 'package:stapo_driver/features/register/ui/widgets/name_field_widget.dart';
-import 'package:stapo_driver/features/register/ui/widgets/password_field_widget.dart';
 import 'package:stapo_driver/features/register/ui/widgets/phone_field_widget.dart';
 import 'package:stapo_driver/features/register/ui/widgets/register_button_widget.dart';
 
@@ -41,11 +39,7 @@ class RegisterScreen extends StatelessWidget {
                 verticalSpace(50),
                 NameFieldWidget(),
                 verticalSpace(25),
-                EmailFieldWidget(),
-                verticalSpace(25),
                 PhoneFieldWidget(),
-                verticalSpace(25),
-                PasswordFieldWidget(),
                 verticalSpace(35),
                 Text(
                   "سنرسل رمز تحقق مكون من 4 أرقام \n لتأكيد رقم الجوال",

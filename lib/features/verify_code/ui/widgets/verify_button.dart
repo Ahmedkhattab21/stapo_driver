@@ -63,7 +63,8 @@ class VerifyButton extends StatelessWidget {
                   if (isRegister) {
                     context.pushNamed(Routes.signUpSuccessScreen);
                   } else {
-                    context.pushNamed(Routes.resetPasswordScreen);
+
+                    // context.pushNamed(Routes.resetPasswordScreen);
                   }
 
                   //    VerifyCodeCubit.get(context)

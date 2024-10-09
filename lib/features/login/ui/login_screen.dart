@@ -7,9 +7,8 @@ import 'package:stapo_driver/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stapo_driver/features/login/ui/widgets/button_screen_widget.dart';
-import 'package:stapo_driver/features/login/ui/widgets/email_field_widget.dart';
+import 'package:stapo_driver/features/login/ui/widgets/login_phone_widget.dart';
 import 'package:stapo_driver/features/login/ui/widgets/google_login_widget.dart';
-import 'package:stapo_driver/features/login/ui/widgets/password_field_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -40,10 +39,10 @@ class LoginScreen extends StatelessWidget {
                   style: TextStyles.font25BlackColorEWeight600,
                 ),
                 verticalSpace(40),
-                EmailFieldWidget(),
-                verticalSpace(20),
-                PasswordFieldWidget(),
-                verticalSpace(60),
+                LoginPhoneWidget(),
+                verticalSpace(50),
+                // PasswordFieldWidget(),
+                verticalSpace(40),
                 ButtonScreenWidget(),
                 verticalSpace(30),
                 Text("or use", style: TextStyles.font15BlackColorWeight400),

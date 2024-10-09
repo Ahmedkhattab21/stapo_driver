@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:stapo_driver/config/routes/routes.dart';
 import 'package:stapo_driver/core/utils/app_colors_white_theme.dart';
+import 'package:stapo_driver/core/utils/extentions.dart';
 import 'package:stapo_driver/core/utils/styles.dart';
 import 'package:stapo_driver/core/widgets/button_widget.dart';
 
@@ -22,6 +24,11 @@ class ButtonScreenWidget extends StatelessWidget {
             blurRadius: 25,
             color: AppColors.purpleColorDC.withOpacity(.16)
         ),
-        onPressed: () {});
+        onPressed: () {
+          context.pushNamed(Routes.verifyCodeScreen,arguments: {
+            "isRegister":false,
+            "userId":1
+          });
+        });
   }
 }

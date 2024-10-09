@@ -1,30 +1,35 @@
 import 'package:stapo_driver/core/services/cache_helper.dart';
 import 'package:stapo_driver/core/utils/constant_keys.dart';
-import 'package:stapo_driver/features/login/data/models/get_country_response.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stapo_driver/features/login/data/repos/login_repo.dart';
 import 'package:stapo_driver/features/login/logic/login_state.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stapo_driver/features/register/data/models/get_country_response.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   final LoginRepo _loginRepo;
 
   LoginCubit(this._loginRepo) : super(InitialState());
 
+  List<GetCountryResponse> countries = [
+    GetCountryResponse(id: 1, name: "+971",),
+    GetCountryResponse(id: 2, name: "+972"),
+    GetCountryResponse(id: 3, name: "+973"),
+  ];
 
-  List<GetCountryResponse> countries = [];
 
   getCounty() {
-    emit(OnGetCountryLoadingState());
-    _loginRepo.getCountry().then((value) {
-      value.fold((l) {
-        emit(OnGetCountryErrorState());
-      }, (r) {
-        countries = r;
-        emit(OnGetCountrySuccessState());
-      });
-    }).catchError((error) {
-      emit(OnGetCountryCatchErrorState());
-    });
+    // emit(OnGetCountryLoadingState());
+    // _loginRepo.getCountry().then((value) {
+    //   value.fold((l) {
+    //     emit(OnGetCountryErrorState());
+    //   }, (r) {
+    //     countries = r;
+    //     emit(OnGetCountrySuccessState());
+    //   });
+    // }).catchError((error) {
+    //   emit(OnGetCountryCatchErrorState());
+    // });
   }
 
   GetCountryResponse? selectedCountry;
