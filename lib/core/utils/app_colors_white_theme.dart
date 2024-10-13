@@ -5,6 +5,7 @@ class AppColors {
   static Color blackColor = Colors.black;
   static Color whiteColorE = const Color(0xffEEEEEE);
   static Color yellowColor = const Color(0xffF6D447);
+  static Color yellowColor31 = const Color(0xffF3CC31);
   static Color whiteColor5 = const Color(0xffA5A5A5);
   static Color whiteColorE5 = const Color(0xffE5E5E5);
   static Color whiteColorF = const Color(0xff7F7F7F);
@@ -15,6 +16,28 @@ class AppColors {
   static Color greyColorE1 = const Color(0xffE1E1E1);
   static Color greyColorBC = const Color(0xffBCBCBC);
   static Color greyColor82 = const Color(0xff828282);
+  static Color greyColorA8 = const Color(0xffA8A8A8);
+  static Color greyColorE8 = const Color(0xffE8E8E8);
+  static Color greenColorEE = const Color(0xffE5EFEE);
+  static Color greenColorF3 = const Color(0xffDDE7F3);
+  static Color greenColorEA = const Color(0xffFBEAEA);
+  static Color greenColorED = const Color(0xffE9EEED);
+  static Color greenColorD8 = const Color(0xffC8E6D8);
+  static Color greyColor86 = const Color(0xff868686);
+  static Color greyColorF5 = const Color(0xffF5F5F5);
+  static Color greyColor49 = const Color(0xff484849);
+  static Color whiteColorFo = const Color(0xffF0F0F0);
+  static Color whiteColorD2 = const Color(0xffD2D2D2);
+  static Color whiteColorB7 = const Color(0xffB7B7B7);
+  static Color greenColorE6 = const Color(0xffE0EFE6);
+  static Color greenColorAEA = const Color(0xffEAEAEA);
+  static Color greyColor2A = const Color(0xff20232A);
+  static Color greyColor70 = const Color(0xff707070);
+
+
+
+
+
 
 
 
@@ -33,7 +56,6 @@ class AppColors {
 
   ///
 
-  static Color whiteColorFo = const Color(0xffF0F0F0);
 
   static Color greyColorF2 = const Color(0xffF2F2F2);
   static Color greyColor90 = const Color(0xff8F8F90);
@@ -50,7 +72,6 @@ class AppColors {
   static Color greyColor40 = const Color(0xff404040);
   static Color greyColorDB = const Color(0xffDBDBDB);
   static Color greyColor99 = const Color(0xff999999);
-  static Color greyColorE8 = const Color(0xffE8E8E8);
   static Color greyColor76 = const Color(0xff767676);
   static Color greyColor77 = const Color(0xff777777);
   static Color greyColorC5 = const Color(0xffC5C5C5);

@@ -14,6 +14,7 @@ class AppTextFormField extends StatelessWidget {
   final String hintText;
   final bool? isObscureText;
   final Widget? suffixIcon;
+  final int? maxLines;
   final Widget? prefixIcon;
   final Color? backgroundColor;
   final bool isPhoneNumber;
@@ -32,6 +33,7 @@ class AppTextFormField extends StatelessWidget {
     this.focusedBorder,
     this.enabledBorder,
     this.inputTextStyle,
+    this.maxLines,
     this.hintStyle,
     this.style,
     required this.hintText,
@@ -55,6 +57,7 @@ class AppTextFormField extends StatelessWidget {
       autofocus: autofocus!,
       controller: controller,
       cursorColor: AppColors.blackColor,
+      maxLines: maxLines,
       enableSuggestions: true,
       autocorrect: true,
       autofillHints: const [AutofillHints.email],

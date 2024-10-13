@@ -63,6 +63,7 @@ class VerifyButton extends StatelessWidget {
                   if (isRegister) {
                     context.pushNamed(Routes.signUpSuccessScreen);
                   } else {
+                    context.pushNamed(Routes.buttonNavigationScreen);
 
                     // context.pushNamed(Routes.resetPasswordScreen);
                   }
