@@ -1,38 +1,8 @@
-enum EnumTextField {
-  email,
-  forgetEmail,
-  password,
-  resetPassword,
-  confirmResetPassword,
-  name,
-  phone,
-  money,
-  paymentMoney,
-  comment,
-  verifyCode,
-  sendMessage,
-  location,
-  message,
-  idNumber,
-  profileName,
-  profileOldPassword,
-  profileNewPassword,
-  profilePhone,
-  profileEmail,
-  ninjaPayment,
-}
+enum TransactionStatus { success, inProgress, rejected }
 
-enum EnumPopup {
-  noInternet,
-  signIn,
-  userPayment,
-  rateNinja,
-  userComment,
-  userDone,
-  userReEnterPayment,
-  deleteAccount,
-  branchLocation,
-  draftOrders,
-  ninjaAccepted,
+enum TrackOrderStatus {
+  orderReceived,
+  underProcessing,
+  deliveryInProgress,
+  delivered
 }
-

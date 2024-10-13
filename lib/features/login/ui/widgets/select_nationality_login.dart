@@ -36,7 +36,7 @@ class _SelectNationalityLoginState
               isExpanded: true,
               hint: Text(
                 "اختار دولتك",
-                style: TextStyles.font15DarkBlueColor33Weight400,
+                style: TextStyles.font15BlackColorFWeight400,
               ),
               value: widget.selectedCountry.selectedCountry,
               underline: const SizedBox(),

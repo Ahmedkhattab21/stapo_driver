@@ -1,16 +1,28 @@
 import 'package:stapo_driver/config/routes/routes.dart';
 import 'package:stapo_driver/core/services/services_locator.dart';
+import 'package:stapo_driver/features/add_new_address/logic/add_new_address_cubit.dart';
+import 'package:stapo_driver/features/add_new_address/ui/add_new_address_screen.dart';
+import 'package:stapo_driver/features/button_navigation/logic/button_navigation_cubit.dart';
+import 'package:stapo_driver/features/button_navigation/ui/button_navigation_screen.dart';
+import 'package:stapo_driver/features/edit_profile/logic/edit_profile_cubit.dart';
+import 'package:stapo_driver/features/edit_profile/ui/edit_profile_screen.dart';
 import 'package:stapo_driver/features/forget_password/logic/forget_password_cubit.dart';
 import 'package:stapo_driver/features/forget_password/ui/forget_password_screen.dart';
 import 'package:stapo_driver/features/login/logic/login_cubit.dart';
 import 'package:stapo_driver/features/login/ui/login_screen.dart';
 import 'package:stapo_driver/features/on_boarding/logic/on_boarding_cubit.dart';
 import 'package:stapo_driver/features/on_boarding/ui/on_boarding_screen.dart';
+import 'package:stapo_driver/features/order_details/logic/order_details_cubit.dart';
+import 'package:stapo_driver/features/order_details/ui/order_details_screen.dart';
 import 'package:stapo_driver/features/register/logic/register_cubit.dart';
 import 'package:stapo_driver/features/register/ui/register_screen.dart';
 import 'package:stapo_driver/features/reset_password/logic/reset_password_cubit.dart';
 import 'package:stapo_driver/features/reset_password/ui/reset_password_screen.dart';
+import 'package:stapo_driver/features/saved_addresses/logic/saved_addresses_cubit.dart';
+import 'package:stapo_driver/features/saved_addresses/ui/saved_addresses_screen.dart';
 import 'package:stapo_driver/features/sign_up_success/ui/sign_up_success_screen.dart';
+import 'package:stapo_driver/features/transaction_history/logic/transaction_history_cubit.dart';
+import 'package:stapo_driver/features/transaction_history/ui/transaction_history_screen.dart';
 import 'package:stapo_driver/features/verify_code/logic/verify_code_cubit.dart';
 import 'package:stapo_driver/features/verify_code/ui/verify_code_screen.dart';
 import 'package:flutter/material.dart';
@@ -79,6 +91,44 @@ class RouteGenerator {
 
       case Routes.signUpSuccessScreen:
         return MaterialPageRoute(builder: (_) => const SignUpSuccessScreen());
+
+      case Routes.buttonNavigationScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => ButtonNavigationCubit(),
+                  child: ButtonNavigationScreen(),
+                ));
+
+      case Routes.transactionHistoryScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => TransactionHistoryCubit(getIt()),
+                  child: TransactionHistoryScreen(),
+                ));
+      case Routes.savedAddressesScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => SavedAddressesCubit(getIt()),
+                  child: SavedAddressesScreen(),
+                ));
+  case Routes.addNewAddressScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => AddNewAddressCubit(getIt()),
+                  child: AddNewAddressScreen(),
+                ));
+  case Routes.editProfileScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => EditProfileCubit(),
+                  child: EditProfileScreen(),
+                ));
+  case Routes.orderDetailsScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => OrderDetailsCubit(),
+                  child: OrderDetailsScreen(),
+                ));
 
       // case Routes.propertyDetailsScreen:
       //   return MaterialPageRoute(
